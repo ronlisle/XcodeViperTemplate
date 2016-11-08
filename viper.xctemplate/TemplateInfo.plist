@@ -17,6 +17,6 @@
 	<key>DefaultCompletionName</key>
 	<string>File</string>
 	<key>MainTemplateFile</key>
-	<string>___FILEBASENAME___Interactor.swift</string>
+	<string>___FILEBASENAME___.txt</string>
 </dict>
 </plist>

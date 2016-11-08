@@ -1,0 +1,13 @@
+The Viper unit test case files provide a starting point for your tests.
+They provide tests verifying the linkage between the files, but do not
+test any functionality. You will need to add tests to do that.
+
+Tests case files created:
+   ___FILEBASENAME___InteractorTests
+   ___FILEBASENAME___PresenterTests
+   ___FILEBASENAME___WireframeTests
+
+Mock objects created:
+   Mock___FILEBASENAME___Interactor
+   Mock___FILEBASENAME___Presenter
+   Mock___FILEBASENAME___Wireframe

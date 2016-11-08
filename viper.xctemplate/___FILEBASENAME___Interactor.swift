@@ -22,7 +22,8 @@ class ___FILEBASENAME___Interactor: NSObject, ___FILEBASENAME___InteractorInput 
     }
 
     func refreshData() {
-        let displayData = getActivitiesDisplayData()
+        //TODO: format Entity data to provide to the ___FILEBASENAME___Presenter
+
         output?.set___FILEBASENAME___DisplayData(displayData)
     }
 

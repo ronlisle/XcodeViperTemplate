@@ -1,0 +1,18 @@
+The VIPER class files provide a starting scaffold.
+They provide the basic structure and the linkage between files, but do not
+provide any functionality. You will need to add that yourself.
+I recommend that you also add the VIPER Tests to your project, and use
+TDD as you add that functionality.
+
+This template assumes that you have already added the view controller,
+and that it is named ___FILEBASENAME___ViewController.
+
+VIPER class files created:
+   ___FILEBASENAME___Interactor
+   ___FILEBASENAME___Presenter
+   ___FILEBASENAME___Wireframe
+
+Protocol files created:
+   ___FILEBASENAME___InteractorIO
+   ___FILEBASENAME___ModuleInterface
+   ___FILEBASENAME___ViewInterface
