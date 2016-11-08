@@ -16,3 +16,53 @@ Protocol files created:
    ___FILEBASENAME___InteractorIO
    ___FILEBASENAME___ModuleInterface
    ___FILEBASENAME___ViewInterface
+
+The application delegate should be modified to instantiate the VIPER classes,
+and call upon the wireframe to present the view controller. This can be
+accomplished as shown here:
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    var window: UIWindow?
+
+    let appDependencies = AppDependencies()
+
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+        appDependencies.installRootViewControllerIntoWindow(window!)
+
+        return true
+    }
+}
+
+An AppDependencies file is a good way to isolate dependencies when interconnecting
+the files. This can be done as shown here:
+
+class AppDependencies {
+    var wireframe = ___FILEBASENAME___Wireframe()
+
+    init() {
+        configureDependencies()
+    }
+
+    func installRootViewControllerIntoWindow(_ window: UIWindow) {
+        wireframe.present___FILEBASENAME___InterfaceFromWindow(window)
+    }
+
+    func configureDependencies() {
+        wireframe = ___FILEBASENAME___Wireframe()
+        let dataManager = ___FILEBASENAME___DataManager()
+        let presenter = ___FILEBASENAME___Presenter()
+        let interactor = ___FILEBASENAME___Interactor(dataManager: dataManager)
+
+        wireframe.___FILEBASENAME___Presenter = presenter
+
+        interactor.output = presenter
+
+        presenter.interactor = interactor
+        presenter.wireframe = wireframe
+
+    }
+}

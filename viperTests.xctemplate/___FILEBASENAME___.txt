@@ -11,3 +11,5 @@ Mock objects created:
    Mock___FILEBASENAME___Interactor
    Mock___FILEBASENAME___Presenter
    Mock___FILEBASENAME___Wireframe
+
+Be sure to add the subject test files to the test target.
