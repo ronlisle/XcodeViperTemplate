@@ -28,9 +28,13 @@ To install the template, copy the two directories to ~/Library/Developer/Xcode/T
 ## Usage
 
 To add VIPER files:
+
 1. Create the project using your choice of project Templates (if you haven't already done so).
-1. Add New File, and select the Viper template.
-1. Provide a filename matching the name of ViewController. For example, if the view controller is named MainViewController, then specify "Main" as the file name.
-1. Once the files are added, add linkage to the files from the existing view controller using instructions in the created *txt file.
+
+2. Add New File, and select the Viper template.
+
+3. Provide a filename matching the name of ViewController. For example, if the view controller is named MainViewController, then specify "Main" as the file name.
+
+4. Once the files are added, add linkage to the files from the existing view controller using instructions in the created *txt file.
 
 Refer to the *.txt files provided by the template for additional information.
