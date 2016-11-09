@@ -1,6 +1,13 @@
 # XcodeViperTemplate
 Template for adding Swift 3 Viper components to an Xcode 8 project
 
+**This code is very preliminary.**
+
+Please feel free to try it out and provide feedback.
+I'm fairly certain that you'll run into problems,
+and I'll do my best to quickly resolve them.
+This is a work in progress.
+
 VIPER is an architecture created to help better organize iOS projects and provide a clear separation of concerns to prevent the common "Massive View Controller" problem.
 
 Refer to the [Architecting iOS Apps with Viper](https://www.objc.io/issues/13-architecture/viper/) article on objc.io for a tutorial on VIPER. You can also download an example swift app from [Github](https://github.com/mutualmobile/VIPER-SWIFT).
