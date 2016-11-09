@@ -17,6 +17,38 @@ Protocol files created:
    ___FILEBASENAME___ModuleInterface
    ___FILEBASENAME___ViewInterface
 
+These files assume the existence of a view controller named
+___FILEBASENAME___ViewController. This file will need to be modified to
+link to these new files. This can be done as shown here:
+
+class ___FILEBASENAME___ViewController : UIViewController, ___FILEBASENAME___ViewInterface {
+    var eventHandler : ___FILEBASENAME___ModuleInterface?
+    var dataProperty : ___FILEBASENAME___DisplayData?
+    ...
+
+    // Request display data from the Presenter.
+    // This should result in a request from the Presenter to the Interactor
+    // to return data formatted for display.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        eventHandler?.updateView()
+    }
+
+    // Receive display data updates from the Presenter
+    func showDisplayData(_ data: ___FILEBASENAME___DisplayData) {
+
+        dataProperty = data
+        updateDisplay()       // Or whatever actions needed to update display
+    }
+    ...
+
+}
+
+In addition, the VC will need to request
+
+
+
 The application delegate should be modified to instantiate the VIPER classes,
 and call upon the wireframe to present the view controller. This can be
 accomplished as shown here:
